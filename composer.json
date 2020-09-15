@@ -1,0 +1,54 @@
+{
+    "name": "booni3/amazon-shipping",
+    "description": "Amazon Shipping API",
+    "keywords": [
+        "booni3",
+        "amazon-shipping"
+    ],
+    "homepage": "https://github.com/booni3/amazon-shipping",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adam",
+            "email": "adam@profilestudio.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Booni3\\AmazonShipping\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Booni3\\AmazonShipping\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Booni3\\AmazonShipping\\AmazonShippingServiceProvider"
+            ],
+            "aliases": {
+                "AmazonShipping": "Booni3\\AmazonShipping\\AmazonShippingFacade"
+            }
+        }
+    }
+}
