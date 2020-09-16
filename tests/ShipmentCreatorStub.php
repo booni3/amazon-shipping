@@ -103,8 +103,8 @@ trait ShipmentCreatorStub
         $c->addContainer($container);
 
         $c->setExpectedServiceOffering(
-            now()->next('day')->startOfDay(),
-            now()->next('day')->endOfDay()
+            now()->addDay()->startOfDay(),
+            now()->addDay()->endOfDay()
         );
 
         return $c;

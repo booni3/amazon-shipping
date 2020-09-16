@@ -65,8 +65,8 @@ class ShipmentCreator
     {
         $this->expectedServiceOffering = [
             'receiveWindow' => [
-                'start' => $from->getPreciseTimestamp(3),
-                'end' => $to->getPreciseTimestamp(3),
+                'start' => $from->timestamp * 1000,
+                'end' => $to->timestamp * 1000,
             ]
         ];
     }
